@@ -36,6 +36,7 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
     /* This code centers the container to the center of page  */
@@ -242,6 +243,26 @@ h2::after {
     
 }
 
+/* --------------------------------------------------------------------- */
+/* LINKS */
+/* ------------------------------------------------------------------------- */
+
+a:link,
+a:visited {
+    color: rgb(240, 203, 37);
+    text-decoration: none;
+    border-bottom: 1px rgb(240, 203, 37);
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+color: #555;
+border-bottom: 1px solid transparent;
+}
+
+
 /* ----------------------------------------------------------------------------------------------------------- */
 /* BUTTONS */
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -279,6 +300,11 @@ h2::after {
     /* Add color directly to the border instead of writing additional code */
     border: 1px solid rgb(240, 203, 37);
     color: rgb(240, 203, 37);;
+}
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
 }
 
 .btn-full:hover,
@@ -332,19 +358,58 @@ h2::after {
 /* ----------------------------------------------- */
 
 .city-features {
-
+    
     margin: 0;
     height: 50px;
     width: fit-content;
+}
+.city-features .small-icon {
+    color: rgb(240, 203, 37);
 }
 
 .small-icon svg {
    height: 30px;
    width: 30px;
+   color: rgb(240, 203, 37);
 }
 
 .city-features p {
     float: right;
     padding-left: 15px;
+    color: black;
     
+}
+
+.photo-container {
+    display: block;
+    width: 100;
+    float: left;
+}
+
+.city-photo {
+    margin: 0;
+    width: 92.5%;
+    transform: scale(1);
+}
+
+/* ----------------------------------------------- */
+/* TESTIMONIALS */
+/* ----------------------------------------------- */
+
+.testimonial-section {
+    /* You can add an image using the class selector and adding the photo to "background-image: url(filename.jpg)" */
+    /* add "linear-gradient()" to darken an image that may appear to bright */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.767)),url(back-customers.jpg);
+    /* Use this to make the image span the width of the browser  */
+    background-size: cover;
+    color: white;
+    /* This effect allows user to scroll the website while the picture stays fixed in the background of the moveable content */
+    background-attachment: fixed;
+    
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
 }
