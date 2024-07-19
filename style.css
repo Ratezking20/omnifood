@@ -271,7 +271,8 @@ border-bottom: 1px solid transparent;
 .btn:link, 
 /* When you use the ".btn" class it targets all elements with class="btn" regardless if you have addition identity such as class="btn btn-full" to differentiate between buttons. */
 /* adding a pseudo class such as ":link :visited :hover :active" allows you to show the different states of what the button will look or behave before, while or after clicking the button */
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -283,12 +284,16 @@ border-bottom: 1px solid transparent;
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #a38800;
+    
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: rgb(240, 203, 37);
     border: 1px solid rgb(240, 203, 37);
     color: #fff;
@@ -299,7 +304,7 @@ border-bottom: 1px solid transparent;
 .btn-ghost:visited {
     /* Add color directly to the border instead of writing additional code */
     border: 1px solid rgb(240, 203, 37);
-    color: rgb(240, 203, 37);;
+    color: rgb(240, 203, 37);
 }
 
 .btn-app:link,
@@ -412,4 +417,161 @@ blockquote {
     padding: 2%;
     font-style: italic;
     line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    /* Use display block to put elements on their own respective lines */
+    display: block;
+    /* Anytime you position an element to have an "absolute" position, you must also ensure that the elements parent has a position set to relative */
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+
+cite img {
+    height: 45px;
+    border-bottom: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ----------------------------------------------- */
+/* PRICE PLAN SECTION */
+/* ----------------------------------------------- */
+
+ul {
+    list-style: none;
+}
+
+.plans-section {
+    background-color: rgb(230, 230, 230);
+
+}
+
+.check-mark-icon {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin: 0 15px 0 25px;
+    color: rgb(240, 203, 37);
+    
+}
+
+.plan-box {
+    height: auto;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #fff;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px rgb(241, 241, 241);
+}
+
+.plan-box div {
+    padding-bottom: 15px;
+    border-bottom: #555;
+}
+
+.plan-box div:first-child {
+    
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: rgb(240, 203, 37);
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+    justify-content: center;
+}
+
+.btn-space {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* CONTACT FORM */
+/* ----------------------------------------------- */
+
+.form-contact {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 2px;
+    border-radius: 3px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+
+
+*:focus {
+    outline: none;
+}
+
+form {
+    margin: 0;
+    width: 60%;
+    display: inline;
+
+    }
+
+.col-form-1 {
+    margin: 0;
+    text-align: left;
+    max-width: auto;
+    padding-left: 20px;
+}
+
+.col-form-2 {
+    margin: 0 0 0 0px;
+    max-width: auto;
+    float: right;
+    padding-right: 20px;
+}
+.form-section {
+    text-align: center;
+    
 }
