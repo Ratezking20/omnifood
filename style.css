@@ -575,3 +575,85 @@ form {
     text-align: center;
     
 }
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #4d4d4dfa;
+    padding: 50px;
+    font-size: 75%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right ;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-icon {
+    width: 25px;
+    height: auto;
+}
+
+.footer-p {
+    color: #b8b8b8;
+    font-size: 90%;
+    text-align: center;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    /* Targeting these the icons / "social-links" in the footer here allows you to change the inherited attributes that may be undesired */
+    border: 0;
+    text-decoration: none;
+    color: #b8b8b8;
+    transition: color 0.2s;
+
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.facebook:hover {
+    color: #1877f2;
+}
+
+.tiktok:hover {
+    color: #ee1d52;
+}
+
+.linkedin:hover {
+    color: #0a66c2;
+}
+
+.tiktok,
+.facebook,
+.linkedin {
+    transition: color 0.2s;
+}
